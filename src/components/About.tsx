@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
    
-    <section className="py-24">
+    <section className="py-24" id='about'>
     <h2 className="company-title">COMPANY OVERVIEW</h2>
     <p className="company-overview">
       Kisanji Enterprises specializes in temperature-controlled road transport, ensuring the safe and timely delivery of perishable goods across Kenya.

@@ -41,6 +41,8 @@ const WhyUs = () => {
         <p className="why-choose-description">Extensive transport network for seamless delivery.</p>
       </div>
     </div>
+               <a href="#work" className="text-coral-500 flex justify-center mt-5"><Image src="/arrow.png" alt="Arrow" width={50} height={50} /></a> 
+    
   </section>
 
   )

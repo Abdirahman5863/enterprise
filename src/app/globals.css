@@ -130,12 +130,14 @@
   @apply bg-white;
 }
 
+
 .nav-link {
-  @apply text-white/80 hover:text-white transition-colors duration-300;
+  @apply text-white/80 hover:text-white   transition duration-300 ;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.5px;
+;
 }
 
 .nav-link.active {
@@ -206,7 +208,34 @@
   font-family: 'EB Garamond', serif;
   @apply text-[24px] font-semibold mb-3 text-[#2C3E50];
 }
+.header-description {
+  font-family: 'EB Garamond', serif;
+  @apply text-[12px] italic  text-center max-w-[300px] mx-auto leading-relaxed;
+}
+.header-title{
+  font-family: 'EB Garamond', serif;
+  @apply text-[30px] font-bold mb-3  uppercase;
+  letter-spacing: 10px;
 
+
+}
+
+.c-description {
+  font-family: 'EB Garamond', serif;
+  @apply text-[16px] italic    mx-auto leading-relaxed;
+}
+
+.c-p {
+  font-family: 'EB Garamond', serif;
+  @apply text-[14px] italic    mx-auto leading-relaxed;
+}
+.c-title{
+  font-family: 'EB Garamond', serif;
+  @apply text-[30px] font-bold mb-3  uppercase;
+  letter-spacing: 10px;
+
+
+}
 .core-value-description {
   font-family: 'EB Garamond', serif;
   @apply text-[18px] italic text-[#666] text-center max-w-[300px] mx-auto leading-relaxed;

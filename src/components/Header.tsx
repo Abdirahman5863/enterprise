@@ -3,7 +3,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight,  } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -25,7 +26,7 @@ const Header = () => {
       const newParticles = Array.from({ length: 50 }, (_, i) => ({
         id: i,
         style: {
-          left: `${Math.random() * 100}%`,
+          left: `${Math.random() * 50}%`,
           top: `${Math.random() * 100}%`,
           width: `${Math.random() * 4 + 2}px`,
           height: `${Math.random() * 4 + 2}px`,
@@ -44,7 +45,7 @@ const Header = () => {
       setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
   return (
-    <header className="hero-background min-h-[100vh] relative text-white">
+    <header className="hero-background min-h-full relative text-white md:px-28 p-0">
         {/* Particles */}
         <div className="particles ">
           {particles.map((particle) => (
@@ -56,17 +57,31 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Navigation */}
         <nav className="container mx-auto px-6 py-8 flex justify-between items-center relative z-10">
-          <h1 className="text-2xl font-bold tracking-wider">KISANJI ENTERPRISES</h1>
-          <div className="hidden md:flex space-x-12">
-            <a href="#home" className="nav-link active">HOME</a>
-            <a href="#about" className="nav-link">ABOUT</a>
-            <a href="#work" className="nav-link">WORK</a>
-            <a href="#services" className="nav-link">SERVICES</a>
-            <a href="#contact" className="nav-link">CONTACT</a>
-          </div>
-        </nav>
+  <Link href="/" className="text-l font-bold tracking-wider flex  flex-col"><span>KISANJI </span><span>ENTERPRISES</span></Link>
+  <div className="hidden md:flex space-x-12">
+    {['HOME', 'ABOUT', 'WORK', 'SERVICES', 'CONTACT'].map((item) => (
+      <a href={`#${item.toLowerCase()}`}
+      className={`relative group overflow-hidden ${
+        item === 'HOME' ? 'text-coral-500' : 'text-white'
+      }`}
+      key={item} >
+        <span className="block transition-transform duration-300 transform translate-y-0 group-hover:-translate-y-full">
+          {item}
+        </span>
+        <span className="block absolute inset-0 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0 text-coral-500">
+          {item}
+        </span>
+      </a>
+    ))}
+  </div>
+</nav>
+
+
+
+
+
+
 
         {/* Hero Content */}
         <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -79,8 +94,8 @@ const Header = () => {
                     index === activeSlide ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <h2 className="text-5xl font-bold mb-8">{slide.title}</h2>
-                  <p className="text-xl leading-relaxed">{slide.content}</p>
+                  <h2 className="text-5xl font-bold mb-8 header-title">{slide.title}</h2>
+                  <p className="text-xl leading-relaxed header-description">{slide.content}</p>
                 </div>
               ))}
             </div>
@@ -90,7 +105,7 @@ const Header = () => {
               onClick={prevSlide}
               className="slider-arrow left-4"
             >
-              <ChevronLeft className="w-6 h-6 text-white" />
+              <ChevronLeft className="w-6 h-6  text-white"  />
             </button>
             <button 
               onClick={nextSlide}
