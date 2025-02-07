@@ -10,6 +10,7 @@ import WhyUs from "@/components/Why-us";
 import Commitment from "@/components/Commitment";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
       <Contact />
 
       {/* Footer */}
+      <Footer/>
 
     </main>
   );
