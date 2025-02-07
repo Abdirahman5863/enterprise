@@ -187,7 +187,7 @@
 
 .company-overview {
   font-family: 'EB Garamond', serif;
-  @apply text-[20px] text-center italic text-[#2C3E50] leading-[1.8] max-w-[1000px] mx-auto;
+  @apply md:text-[20px] text-[16px] text-center p-2 italic text-[#2C3E50] leading-[2] max-w-[1000px] mx-auto;
 }
 
 .core-values-title {
