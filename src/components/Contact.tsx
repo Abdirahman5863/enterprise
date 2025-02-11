@@ -12,8 +12,9 @@ const Contact = () => {
         <div className="space-y-4">
           <p className="text-white">📞 Phone: 0723434643</p>
           <p className="text-white">📧 Email: smirenja4@gmail.com</p>
-          <p className="text-white">📧 Sales: <a href="mailto:Sales@enterprise.com" className="underline">Sales@enterprise.com</a></p>
-          <p className="text-white">📧 Salome: <a href="mailto:Salome@kisanjienterprise.com" className="underline">Salome@kisanjienterprise.com</a></p>
+
+          <p className="text-white">📧 Sales: <a href="mailto:Sales@enterprise.com" className="underline">sales@kisanjienterprise.com </a></p>
+          <p className="text-white">📧 Salome: <a href="mailto:Sales@enterprise.com" className="underline"> Salome@kisanjienterprise.com</a></p>
         </div>
       </div>
     </section>
